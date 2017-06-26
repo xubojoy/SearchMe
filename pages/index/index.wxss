@@ -76,3 +76,15 @@
   text-align: center;
 }
 
+.number_text_placeholder{
+  color: rebeccapurple;
+  width: 700rpx;
+  height: 50rpx;
+  border-radius: 50px;
+  font-size: 14px;
+  margin-top: 0px;
+  /*background-color: powderblue;*/
+  text-align: center;
+
+}
+
