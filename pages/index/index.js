@@ -1,55 +1,22 @@
-//index.js
-//获取应用实例
+var fileData = require('../../utils/config.js')
 var app = getApp()
 Page({
   data: {
+    showData: fileData.mtData().list,
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    companys: [],
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
 
-    })
-  },
   onLoad: function () {
-    console.log('onLoad')
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
-    })
-  },
-  chooseImageTap: function () {
-    let _this = this;
-    wx.showActionSheet({
-      itemList: ['从相册中选择', '拍照'],
-      itemColor: "#f7982a",
-      success: function (res) {
-        if (!res.cancel) {
-          if (res.tapIndex == 0) {
-            _this.chooseWxImage('album')
-          } else if (res.tapIndex == 1) {
-            _this.chooseWxImage('camera')
-          }
-        }
-      }
-    })
-
-  },
-  chooseWxImage: function (type) {
-    let _this = this;
-    wx.chooseImage({
-      sizeType: ['original', 'compressed'],
-      sourceType: [type],
-      success: function (res) {
-        console.log(res);
-        _this.setData({
-          logo: res.tempFilePaths[0],
-        })
-      }
-    })
+    var that = this;
+    var data = that.data.showData;
+    that.setData({ 
+      companys: data
+    });
+    
   },
   onShareAppMessage: function () {
     // return custom share data when user share.

@@ -1,11 +1,18 @@
 <!--index.wxml-->
-<view class="container">
-<!--<text class="title_name">公司名称：</text>-->
-    <!--<text class="title_text">每日高尔夫（北京）科技有限公司</text>-->
-    <!--<text class="number_text">9111-0101-3303-7306-17</text>-->
-  <image class="logo_img" src="{{logo}}" mode="aspectFill" catchtap="chooseImageTap"></image>
-  <input class="title_text" placeholder="请输入公司名称" placeholder-class="number_text_placeholder"/>
-  <text class="number_name_text">统一社会信用代码：</text>
-  
-  <input class="number_text" placeholder="请输入社会信用代码" placeholder-class="number_text_placeholder"/>
+<view class="index">
+    <view class="news">
+        <text class="news-title">公司</text>
+        <block wx:for="{{companys}}">
+          <navigator url="/pages/detail/detail?logo={{item.logo}}&name={{item.name}}&code={{item.code}}">
+             <view class="news-item line">
+                <view class="news-item-pic">
+                  <image mode="aspectFill" src="{{item.logo}}" class="news-item-image"></image>
+                </view>
+                <view class="news-item-words">
+                <view class="news-item-title"><text>{{item.name}}</text></view>
+                </view>
+             </view>
+          </navigator>
+        </block>  
+    </view>  
 </view>
