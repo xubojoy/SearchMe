@@ -16,7 +16,12 @@ Page({
     that.setData({ 
       companys: data
     });
-    
+  },
+  addBtnClick: function (){
+    console.log('-------点击了添加公司')
+   wx.navigateTo({
+     url: '../addCompany/addCompany',
+   })
   },
   onShareAppMessage: function () {
     // return custom share data when user share.

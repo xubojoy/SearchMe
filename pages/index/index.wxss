@@ -5,6 +5,25 @@
     min-height: 100%;
     font-size: 32rpx;
 }
+
+.dobuy-bg{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: mediumpurple;
+}
+
+.dobuy{
+    width: 80%;
+    background-color: mediumpurple;
+    color: white;
+    font-size: 11pt;
+    text-align: center;
+    margin-bottom: 10px;
+    position: fixed;
+    bottom: 0rpx;
+}
 /*.head{
     padding: 80rpx;
     line-height: 1;

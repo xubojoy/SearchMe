@@ -14,5 +14,8 @@
              </view>
           </navigator>
         </block>  
-    </view>  
+    </view> 
+    <view class="dobuy-bg">
+      <button class="dobuy" bindtap="addBtnClick" type="primary">添加公司</button>
+    </view> 
 </view>
