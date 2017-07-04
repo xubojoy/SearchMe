@@ -6,38 +6,22 @@
     font-size: 32rpx;
 }
 
-.dobuy-bg{
+.addBtn-bg{
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     align-items: center;
     background-color: mediumpurple;
 }
 
-.dobuy{
+.addBtn{
     width: 80%;
     background-color: mediumpurple;
     color: white;
     font-size: 11pt;
     text-align: center;
     margin-bottom: 10px;
+    margin-left: 10%;
     position: fixed;
     bottom: 0rpx;
 }
-/*.head{
-    padding: 80rpx;
-    line-height: 1;
-}*/
-/*.body{
-    padding-left: 30rpx;
-    padding-right: 30rpx;
-    overflow: hidden;
-}
-.title{
-    font-size: 52rpx;
-}
-.desc{
-    margin-top: 10rpx;
-    color: #888888;
-    font-size: 28rpx;
-}*/
